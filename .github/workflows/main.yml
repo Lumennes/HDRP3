@@ -20,8 +20,8 @@ jobs:
           - HDRP
           #projectPath:
           #  - test-project
-        unityVersion:
-          - 2022.2.1f1
+        # unityVersion:
+          # - 2022.2.1f1
         targetPlatform:
           #- StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
@@ -61,7 +61,7 @@ jobs:
       ###########################
       - uses: game-ci/unity-builder@v2
         with:
-          unityVersion: ${{ matrix.unityVersion }}
+          # unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
 
@@ -90,7 +90,7 @@ jobs:
       - name: Upload 
         uses: Difegue/action-megacmd@master
         with:
-          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.projectName }}_3/
+          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.projectName }}_4/
         env:
           USERNAME: ${{ secrets.MEGA_USERNAME }}
           PASSWORD: ${{ secrets.MEGA_PASSWORD }}

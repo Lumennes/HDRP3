@@ -20,8 +20,8 @@ jobs:
           - HDRP
           #projectPath:
           #  - test-project
-          #unityVersion:
-          #  - 2019.2.11f1
+        unityVersion:
+          - 2022.2.1f1
         targetPlatform:
           #- StandaloneOSX # Build a macOS standalone (Intel 64-bit).
           - StandaloneWindows64 # Build a Windows 64-bit standalone.
@@ -61,6 +61,7 @@ jobs:
       ###########################
       - uses: game-ci/unity-builder@v2
         with:
+          unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           allowDirtyBuild: true
 

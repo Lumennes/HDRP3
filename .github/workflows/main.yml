@@ -70,6 +70,7 @@ jobs:
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           buildName: ${{ matrix.projectName }}
+          buildMethod: UnityBuilderAction.BuildScript.Build
           #customParameters: -profile SomeProfile -someBoolean -someValue exampleValue
           #cloudRunnerCluster: ${{ matrix.cloudRunnerCluster }}
           allowDirtyBuild: true
@@ -85,7 +86,7 @@ jobs:
           
       - uses: Difegue/action-megacmd@master
         with:
-          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.unityVersion }}/
+          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/${{ matrix.unityVersion }}_2/
         env:
           USERNAME: ${{ secrets.MEGA_USERNAME }}
           PASSWORD: ${{ secrets.MEGA_PASSWORD }}

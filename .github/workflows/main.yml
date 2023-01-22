@@ -66,8 +66,8 @@ jobs:
       ###########################
       - uses: game-ci/unity-builder@v2
         with:
-          UNITY_EMAIL: ${{ secrets.EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.PASSWORD }}
+          UNITY_EMAIL: "lumennes@gmail.com"
+          UNITY_PASSWORD: "Rowdy956"
           #projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}

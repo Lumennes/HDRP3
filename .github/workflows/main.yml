@@ -66,15 +66,15 @@ jobs:
       ###########################
       - uses: game-ci/unity-builder@v2
         with:
+          UNITY_EMAIL: ${{ secrets.EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.PASSWORD }}
           #projectPath: ${{ matrix.projectPath }}
           unityVersion: ${{ matrix.unityVersion }}
           targetPlatform: ${{ matrix.targetPlatform }}
           buildName: ${{ matrix.projectName }}
           buildMethod: UnityBuilderAction.BuildScript.Build
           #customParameters: -profile SomeProfile -someBoolean -someValue exampleValue
-          #cloudRunnerCluster: ${{ matrix.cloudRunnerCluster }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+          #cloudRunnerCluster: ${{ matrix.cloudRunnerCluster }}          
           allowDirtyBuild: true
 
       ###########################

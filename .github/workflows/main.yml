@@ -80,16 +80,16 @@ jobs:
       ###########################
       #          Upload         #
       ###########################
-      #- uses: actions/upload-artifact@v2
-        #with:
-          #name: Build Ubuntu (${{ matrix.unityVersion }})
-          #path: build
-          #retention-days: 14
-          
-      - uses: Difegue/action-megacmd@master
+      - uses: actions/upload-artifact@v2
         with:
-          args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/ #${{ matrix.unityVersion }}_2/
-        env:
-          USERNAME: ${{ secrets.MEGA_USERNAME }}
-          PASSWORD: ${{ secrets.MEGA_PASSWORD }}
+          name: Build ${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
+          retention-days: 14
+          
+      # - uses: Difegue/action-megacmd@master
+        # with:
+          # args: put -c build/${{ matrix.targetPlatform }} /Unity_projects/${{ matrix.projectName }}/ #${{ matrix.unityVersion }}_2/
+        # env:
+          # USERNAME: ${{ secrets.MEGA_USERNAME }}
+          # PASSWORD: ${{ secrets.MEGA_PASSWORD }}
           

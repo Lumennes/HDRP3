@@ -52,7 +52,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: Library
-          key: Library-${{ matrix.projectName }}-ubuntu-${{ matrix.targetPlatform }}-${{ matrix.unityVersion }}
+          key: Library-${{ matrix.projectName }}-ubuntu-${{ matrix.targetPlatform }} #-${{ matrix.unityVersion }}
           restore-keys: |
             Library-${{ matrix.projectName }}-ubuntu-${{ matrix.targetPlatform }}-
             Library-${{ matrix.projectName }}-ubuntu-
@@ -83,7 +83,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: Build ${{ matrix.targetPlatform }}
-          path: build/${{ matrix.targetPlatform }}
+          path: build #/${{ matrix.targetPlatform }}
           retention-days: 14
           
       # - uses: Difegue/action-megacmd@master

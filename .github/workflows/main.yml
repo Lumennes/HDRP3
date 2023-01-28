@@ -9,7 +9,7 @@ on:
 jobs:
   buildForAllPlatformsUbuntu:
     name: Build ${{ matrix.targetPlatform }} #on ${{ matrix.unityVersion }}
-    runs-on: windows-latest
+    runs-on: windows-2019
     strategy:
       fail-fast: false
       matrix:

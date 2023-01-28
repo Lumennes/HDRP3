@@ -14,8 +14,6 @@ Material:
   m_ValidKeywords:
   - _COLORMAP
   - _MATERIAL_AFFECTS_ALBEDO
-  - _MATERIAL_AFFECTS_MASKMAP
-  - _MATERIAL_AFFECTS_NORMAL
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -28,8 +26,6 @@ Material:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
   - TransparentBackface
-  - DecalProjectorForwardEmissive
-  - DecalMeshForwardEmissive
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -129,8 +125,8 @@ Material:
     - _AffectAlbedo: 1
     - _AffectEmission: 0
     - _AffectMetal: 0
-    - _AffectNormal: 1
-    - _AffectSmoothness: 1
+    - _AffectNormal: 0
+    - _AffectSmoothness: 0
     - _AlbedoAffectEmissive: 0
     - _AlphaCutoff: 0.5
     - _AlphaCutoffEnable: 0
@@ -147,8 +143,8 @@ Material:
     - _Cutoff: 0.5
     - _DecalBlend: 1
     - _DecalColorMask0: 15
-    - _DecalColorMask1: 15
-    - _DecalColorMask2: 3
+    - _DecalColorMask1: 0
+    - _DecalColorMask2: 0
     - _DecalColorMask3: 0
     - _DecalLayerMaskFromDecal: 1
     - _DecalMaskMapBlueScale: 1
@@ -283,6 +279,22 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+--- !u!114 &8204557961405454559
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Editor:UnityEditor.Rendering.HighDefinition:AssetVersion
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
 --- !u!114 &8341396245828441609
 MonoBehaviour:
   m_ObjectHideFlags: 11
